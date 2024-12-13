@@ -33,7 +33,7 @@
 
 This repository contains the official implementation of the paper "Detecting and Mitigating Hallucination in Large Vision Language Models via Fine-Grained AI Feedback".
 
-![model](images/1.jpg)
+![model](assets/1.png)
 
 ## Getting Started
 
@@ -41,6 +41,7 @@ This repository contains the official implementation of the paper "Detecting and
 
 ```bash
 git clone https://github.com/Mr-Loevan/HSA-DPO.git
+cd HSA-DPO
 pip install -r requirements.txt
 ```
 

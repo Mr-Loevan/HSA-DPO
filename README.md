@@ -21,7 +21,7 @@
     </br>
     </br>
         <a href="https://arxiv.org/pdf/2404.14233">
-        <img src='https://img.shields.io/badge/arxiv-preprint-red' alt='Paper PDF'></a>
+        <img src='assets/Paper-Arxiv-orange.svg' alt='Paper PDF'></a>
   </p>
 </p>
 

@@ -22,6 +22,8 @@
     </br>
         <a href="https://arxiv.org/pdf/2404.14233">
         <img src='assets/Paper-Arxiv-orange.svg' alt='Paper PDF'></a>
+        <a href="https://huggingface.co/datasets/WenyiXiao/HSA-DPO">
+        <img src='https://img.shields.io/badge/Dataset-HF-yellow' alt='Dataset'></a>
   </p>
 </p>
 
@@ -53,6 +55,7 @@ The code and ckpts are currently undergoing internal review. Please stay tuned!
 ## Todo List
 
 - [x] paper
+- [x] detection & mitigation datasets 
 - [ ] model weights
 - [ ] training code
 

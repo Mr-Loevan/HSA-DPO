@@ -13,7 +13,7 @@
     <a><strong>Fangxun Shu<sup>2</sup>,  </strong></a>
     <a><strong>Zhelun Yu<sup>2</sup> , </strong></a>
     <a><strong>Hao Jiang<sup>2</sup>, </strong></a>
-    <a><strong>Chaolin Zhu<sup>1</sup>,  </strong></a>
+    <a><strong>Linchao Zhu<sup>1</sup>,  </strong></a>
     <br>
     <sup>1</sup> Zhejiang University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup> Alibaba Group&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
     <br>
@@ -52,7 +52,7 @@ pip install -r requirements.txt
 
 ### Model
 
-The code and ckpts are currently undergoing internal review. Please stay tuned!
+The code are currently undergoing internal review. Please stay tuned!
 
 
 ## Todo List

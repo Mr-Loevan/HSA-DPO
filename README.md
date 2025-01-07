@@ -4,16 +4,16 @@
   <h2 align="center">[AAAI 2025] Detecting and Mitigating Hallucination in Large Vision Language Models via Fine-Grained AI Feedback
 </h2>
   <p align="center">
-    <a><strong>Wenyi Xiao<sup>1,*</sup>, </strong></a>
-    <a><strong>Ziwei Huang<sup>1,*</sup>, </strong></a>
-    <a><strong>Leilei Gan<sup>1,†</sup>, </strong></a>
-    <a><strong>Wanggui He<sup>2</sup> , </strong></a>
+    <a><strong>Wenyi Xiao<sup>1*</sup> , </strong></a>
+    <a><strong>Ziwei Huang<sup>1*</sup> , </strong></a>
+    <a><strong>Leilei Gan<sup>1†</sup> , </strong></a>
+    <a><strong>Wanggui He<sup>2</sup>  </strong></a>
     <br>
-    <a><strong>Haoyuan Li, <sup>2</sup> </strong></a>
+    <a><strong>Haoyuan Li<sup>2</sup> ,  </strong></a>
     <a><strong>Zhelun Yu<sup>2</sup> , </strong></a>
-    <a><strong>Fangxun Shu<sup>2</sup>,  </strong></a>
-    <a><strong>Hao Jiang<sup>2</sup>, </strong></a>
-    <a><strong>Linchao Zhu<sup>1</sup>,  </strong></a>
+    <a><strong>Fangxun Shu<sup>2</sup> ,  </strong></a>
+    <a><strong>Hao Jiang<sup>2</sup> , </strong></a>
+    <a><strong>Linchao Zhu<sup>1</sup>   </strong></a>
     <br>
     <sup>1</sup> Zhejiang University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup> Alibaba Group&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
     <br>

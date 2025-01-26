@@ -63,7 +63,7 @@ huggingface-cli download --repo-type dataset WenyiXiao/HSA-DPO
 pip install -U modelscope
 modelscope download --model xiaowenyi/HSA-DPO
 ```
-Refer to [LLaVA repo](https://github.com/haotian-liu/LLaVA) to install inference requirements and use inference code.
+Refer to [Instructions](https://modelscope.cn/models/xiaowenyi/HSA-DPO) to install inference requirements and use inference code.
 
 
 ### Training Code

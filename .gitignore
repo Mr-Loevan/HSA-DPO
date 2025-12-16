@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Data files - these should be downloaded from HuggingFace
+hsa_dpo/data/hsa_dpo_preference_llava1dot5.jsonl
+hsa_dpo/data/image/
+datasets/
+*.tar.gz
+
+# Model weights
+models/
+output/
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Logs
+*.log
+logs/
+runs/
+wandb/
+tensorboard/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+venv/
+ENV/
+
+# Backup files
+*_backup*
+*.bak

@@ -38,24 +38,41 @@ This repository contains the official implementation of the paper "Detecting and
 
 ![model](asset/overview.png)
 
-## Getting Started
+## Table of Contents
 
-### Setup
+- [Overview](#overview)
+- [Installation](#installation)
+- [Dataset](#dataset)
+  - [Download Dataset](#download-dataset)
+  - [Dataset Organization](#dataset-organization)
+  - [Prepare Data for Training](#prepare-data-for-training)
+- [Training](#training)
+  - [Prerequisites](#prerequisites)
+  - [Running Training](#running-training)
+  - [Key Parameters](#key-parameters)
+  - [Multi-GPU Training](#multi-gpu-training)
+- [Evaluation](#evaluation)
+  - [Download Model Weights](#download-model-weights)
+  - [Run Inference](#run-inference)
+- [Citation](#citation)
+- [Acknowledgements](#acknowledgements)
+
+## Installation
 
 ```bash
 git clone https://github.com/Mr-Loevan/HSA-DPO.git
 cd HSA-DPO
 
-# Install the package and dependencies
+# Install HSA-DPO and dependencies
 pip install -e .
 
 # (Optional) Install flash-attention for faster training
 pip install -e ".[flash-attn]"
 ```
 
-### Dataset
+## Dataset
 
-#### Download Dataset
+### Download Dataset
 ```bash
 pip install -U huggingface_hub
 
@@ -63,7 +80,7 @@ pip install -U huggingface_hub
 huggingface-cli download --repo-type dataset WenyiXiao/HSA-DPO --local-dir ./datasets
 ```
 
-#### Dataset Organization
+### Dataset Organization
 
 **For hallucination detection:** 
 - Training data: `hsa_dpo_detection.jsonl`
@@ -73,7 +90,7 @@ huggingface-cli download --repo-type dataset WenyiXiao/HSA-DPO --local-dir ./dat
 - Preference data: `hsa_dpo_preference_llava1dot5.jsonl` 
 - Images: `hsa_dpo_imgs.tar.gz`
 
-#### Prepare Data for Training
+### Prepare Data for Training
 
 ```bash
 # 1. Create data directories
@@ -96,18 +113,9 @@ ls hsa_dpo/data/image/ | head -5
 
 **Note:** The images are named with sequential IDs (0.jpg, 1.jpg, ...) corresponding to the `id` field in the JSONL file.
 
+## Training
 
-### Model LoRA Weight
-```
-pip install -U modelscope
-modelscope download --model xiaowenyi/HSA-DPO
-```
-Refer to [Instructions](https://modelscope.cn/models/xiaowenyi/HSA-DPO) to install inference requirements and use inference code.
-
-
-### Training Code
-
-#### Prerequisites
+### Prerequisites
 
 1. Install the HSA-DPO package:
 ```bash
@@ -124,7 +132,7 @@ huggingface-cli download liuhaotian/llava-v1.5-13b --local-dir ./models/llava-v1
 # The CLIP vision encoder will be auto-downloaded during training
 ```
 
-#### Training
+### Running Training
 
 We provide a training script for HSA-DPO with LLaVA-v1.5:
 
@@ -142,7 +150,7 @@ vim hsa_dpo_train.sh
 bash hsa_dpo_train.sh
 ```
 
-#### Key Parameters
+### Key Parameters
 
 - `use_chosen_score`: Whether to use chosen scores in DPO loss (default: False)
 - `use_rejected_score`: Whether to use rejected scores in DPO loss (default: True)
@@ -151,7 +159,7 @@ bash hsa_dpo_train.sh
 - `per_device_train_batch_size`: Batch size per GPU (default: 8)
 - `learning_rate`: Learning rate (default: 2e-6)
 
-#### Multi-GPU Training
+### Multi-GPU Training
 
 The script supports multi-GPU training with DeepSpeed. Adjust `NUM_GPUS` in the script:
 
@@ -160,12 +168,46 @@ NUM_GPUS=2  # Use 2 GPUs
 bash hsa_dpo_train.sh
 ```
 
+## Evaluation
 
+### Download Model Weights
 
-## Todo List
+```bash
+pip install -U modelscope
+modelscope download --model xiaowenyi/HSA-DPO --local-dir ./checkpoints
+```
 
-- [x] paper
-- [x] detection & mitigation datasets 
-- [x] model weights
-- [x] training code
+### Run Inference
 
+We provide a simple inference script to test the model:
+
+```bash
+# Run inference (LLaVA should already be installed from Installation step)
+python inference/inference_example.py \
+    --model-base path/to/llava-v1.5-13b \
+    --lora-path ./checkpoints/HSA-DPO_llava_v1.5-13B-lora \
+    --image path/to/image.jpg \
+    --prompt "Describe this image in detail."
+```
+
+## Citation
+
+If you find this work useful, please cite our paper:
+
+```bibtex
+@article{xiao2025hsa_dpo,
+  title     = {Detecting and Mitigating Hallucination in Large Vision Language Models 
+               via Fine-Grained AI Feedback},
+  author    = {Xiao, Wenyi and Huang, Ziwei and Gan, Leilei and He, Wanggui and 
+               Li, Haoyuan and Yu, Zhelun and Shu, Fangxun and Jiang, Hao and 
+               Zhu, Linchao},
+  journal   = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume    = {39},
+  number    = {24},
+  pages     = {25543--25551},
+  year      = {2025},
+  month     = {Apr},
+  url       = {https://ojs.aaai.org/index.php/AAAI/article/view/34744},
+  doi       = {10.1609/aaai.v39i24.34744}
+}
+```

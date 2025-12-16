@@ -24,7 +24,7 @@ dependencies = [
     "bitsandbytes==0.41.0",
     "deepspeed==0.9.5",
     
-    # LLaVA dependencies
+    # LLaVA dependencies (LLaVA code is included in hsa_dpo/models/llava-v1_5/)
     "einops==0.6.1",
     "einops-exts==0.0.4",
     "timm==0.6.13",

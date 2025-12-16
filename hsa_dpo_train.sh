@@ -21,6 +21,9 @@ NUM_GPUS=2
 # Training script entry point
 ENTRY="hsa_dpo/models/llava-v1_5/train_dpo.py"
 
+# Set PYTHONPATH to include the LLaVA module directory
+export PYTHONPATH="${PYTHONPATH}:./hsa_dpo/models/llava-v1_5"
+
 echo "Starting HSA-DPO training..."
 echo "Data path: ${DATA_PATH}"
 echo "Image folder: ${IMAGE_FOLDER}"

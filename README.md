@@ -21,7 +21,7 @@
     </br>
     </br>
         <a href="https://arxiv.org/pdf/2404.14233">
-        <img src='asset/Paper-Arxiv-orange.svg' alt='Paper PDF'></a>
+        <img src='https://img.shields.io/badge/Paper-Arxiv-orange' alt='Paper PDF'></a>
         <a href="https://huggingface.co/datasets/WenyiXiao/HSA-DPO">
         <img src='https://img.shields.io/badge/Dataset-HuggingFace-yellow' alt='Dataset'></a>
         <a href="https://modelscope.cn/models/xiaowenyi/HSA-DPO">

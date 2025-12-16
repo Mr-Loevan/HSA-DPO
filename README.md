@@ -54,6 +54,8 @@ git clone https://github.com/Mr-Loevan/HSA-DPO.git
 cd HSA-DPO
 
 # Install HSA-DPO and dependencies
+conda create -n hsa_dpo python==3.9
+conda activate hsa_dpo
 pip install -e .
 
 # (Optional) Install flash-attention for faster training

@@ -43,19 +43,9 @@ This repository contains the official implementation of the paper "Detecting and
 - [Overview](#overview)
 - [Installation](#installation)
 - [Dataset](#dataset)
-  - [Download Dataset](#download-dataset)
-  - [Dataset Organization](#dataset-organization)
-  - [Prepare Data for Training](#prepare-data-for-training)
 - [Training](#training)
-  - [Prerequisites](#prerequisites)
-  - [Running Training](#running-training)
-  - [Key Parameters](#key-parameters)
-  - [Multi-GPU Training](#multi-gpu-training)
 - [Evaluation](#evaluation)
-  - [Download Model Weights](#download-model-weights)
-  - [Run Inference](#run-inference)
 - [Citation](#citation)
-- [Acknowledgements](#acknowledgements)
 
 ## Installation
 
@@ -192,7 +182,7 @@ python inference/inference_example.py \
 
 ## Citation
 
-If you find this work useful, please cite our paper:
+If you find this work useful, we would appreciate it if you could cite our paper:
 
 ```bibtex
 @article{xiao2025hsa_dpo,
